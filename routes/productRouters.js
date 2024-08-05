@@ -4,6 +4,12 @@ const productController = require('../controllers/productController');
 //http://localhost:3000/product/allsp
 router.get('/allsp', productController.getAllProducts);
 
+//http://localhost:3000/product/gioitinhnam
+router.get('/gioitinhnam', productController.getProductsByGioiTinhNam);
+
+//http://localhost:3000/product/gioitinhnu
+router.get('/gioitinhnu', productController.getProductsByGioiTinhNu);
+
 //http://localhost:3000/product/addsp
 router.post('/addsp', productController.addProduct);
 

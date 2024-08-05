@@ -12,6 +12,29 @@ exports.getAllProducts = async (req, res) => {
     }
   };
 
+//lấy sản phẩm theo gioi_tinh nam
+exports.getProductsByGioiTinhNam = async (req, res) => {
+  try {
+    const products = await Product.findAll({ where: { gioi_tinh: 'Nam' } });
+    res.json(products);
+    
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+    
+  }
+}
+
+//lấy sản phẩm theo gioi_tinh Nữ
+exports.getProductsByGioiTinhNu = async (req, res) => {
+  try {
+    const products = await Product.findAll({ where: { gioi_tinh: 'Nữ' } });
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+    
+  }
+}
+
   //Thêm sản phẩm
   exports.addProduct = async (req, res) => {
     try {
