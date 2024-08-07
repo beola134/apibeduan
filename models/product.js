@@ -55,7 +55,7 @@ const Product = sequelize.define('Product', {
         type: DataTypes.STRING(100),
         allowNull: true
     },
-    chat_lieu_day: {  
+    chat_lieu_day: {
         type: DataTypes.STRING(100),
         allowNull: true
     },
@@ -83,12 +83,20 @@ const Product = sequelize.define('Product', {
         type: DataTypes.STRING(255),
         allowNull: true
     },
+    createdAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        defaultValue: Sequelize.NOW
+    },
     id_danh_muc: {
         type: DataTypes.STRING(255),
         allowNull: true
+
     }
+
 }, {
     tableName: 'san_pham',
     timestamps: false
 });
+
 module.exports = Product;

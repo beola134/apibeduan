@@ -5,6 +5,8 @@ const cateController = require('../controllers/cateController');
 //http://localhost:3000/cate/allcate
 router.get('/allcate', cateController.getAllCates);
 
+
+
 //http://localhost:3000/cate/addcate
 router.post('/addcate', cateController.addCate);
 

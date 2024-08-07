@@ -11,6 +11,7 @@ exports.getAllCates = async (req, res) => {
     }
   };
 
+
 // Hàm xử lý việc thêm danh mục với hình ảnh
 exports.addCate = async (req, res) => {
     try {
